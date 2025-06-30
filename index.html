@@ -7,6 +7,7 @@
     
     <!-- Memuat Tailwind CSS untuk styling modern -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
     <!-- Memuat DotLottie Player untuk animasi baru -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
@@ -62,45 +63,51 @@
             </div>
         </header>
 
-        <main class="max-w-4xl mx-auto p-3">
-            <!-- [DIUBAH] Grid dibuat responsif dengan 1 kolom di mobile dan 3 di desktop -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<main class="max-w-4xl w-full mx-auto p-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <!-- Kartu 1: Belajar Berhitung -->
-                <a href="https://supri4dhy.github.io/belajar-hitung/" target="_blank" class="dashboard-card block bg-gradient-to-br from-blue-400 to-blue-500 text-white p-3 rounded-3xl shadow-lg">
-                    <div class="flex flex-row md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
-                        <img src="image/berhitung2.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
-                        <p class="text-lg md:text-xl text-center font-extrabold w-full pr-10">Main Hitung</p>
-                    </div>
-                </a>
+      <!-- Kartu 1: Main Hitung -->
+      <a href="https://supri4dhy.github.io/belajar-hitung/" target="_blank"
+         class="block bg-gradient-to-br from-blue-400 to-blue-500 text-white rounded-3xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+        <img src="image/1.png" alt="Main Hitung"
+             class="w-full h-40 object-cover rounded-t-3xl">
+        <div class="p-4 text-center">
+          <p class="text-lg md:text-xl font-extrabold">Main Hitung</p>
+        </div>
+      </a>
 
+      <!-- Kartu 2: Piramida Angka -->
+      <a href="https://supri4dhy.github.io/hitung/" target="_blank"
+         class="block bg-gradient-to-br from-green-400 to-green-500 text-white rounded-3xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+        <img src="image/2.png" alt="Piramida Angka"
+             class="w-full h-40 object-cover rounded-t-3xl">
+        <div class="p-4 text-center">
+          <p class="text-lg md:text-xl font-extrabold">Piramida Angka</p>
+        </div>
+      </a>
 
-                <!-- Kartu 2: Hitung Bersusun -->
-                <a href="https://supri4dhy.github.io/hitung/" target="_blank" class="dashboard-card block bg-gradient-to-br from-green-400 to-green-500 text-white p-3 rounded-3xl shadow-lg">
-                    <div class="flex flex-row-reverse md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
-                        <img src="image/berhitung.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
-                        <p class="text-lg md:text-xl text-center font-extrabold w-full pl-10">Piramida Angka</p>
-                    </div>
-                </a>
+      <!-- Kartu 3: Hitung Kilat -->
+      <a href="https://supri4dhy.github.io/belajar-cepat/" target="_blank"
+         class="block bg-gradient-to-br from-red-400 to-red-500 text-white rounded-3xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+        <img src="image/3.png" alt="Hitung Kilat"
+             class="w-full h-40 object-cover rounded-t-3xl">
+        <div class="p-4 text-center">
+          <p class="text-lg md:text-xl font-extrabold">Hitung Kilat</p>
+        </div>
+      </a>
 
-                <!-- Kartu 3: Hitung Cepat -->
-                <a href="https://supri4dhy.github.io/belajar-cepat/" target="_blank" class="dashboard-card block bg-gradient-to-br from-red-400 to-red-500 text-white p-3 rounded-3xl shadow-lg">
-                    <div class="flex flex-row md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
-                        <img src="image/hitungcepat.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
-                        <p class="text-lg md:text-xl text-center font-extrabold w-full pr-10">Hitung Kilat</p>
-                    </div>
-                </a>
+      <!-- Kartu 4: Petualang Kata -->
+      <a href="https://supri4dhy.github.io/dikte/" target="_blank"
+         class="block bg-gradient-to-br from-yellow-400 to-yellow-500 text-white rounded-3xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+        <img src="image/dikte.png" alt="Petualang Kata"
+             class="w-full h-40 object-cover rounded-t-3xl">
+        <div class="p-4 text-center">
+          <p class="text-lg md:text-xl font-extrabold">Petualang Kata</p>
+        </div>
+      </a>
 
-                
-                <!-- Kartu 4: Dikte -->
-                <a href="https://supri4dhy.github.io/dikte/" target="_blank" class="dashboard-card block bg-gradient-to-br from-yellow-400 to-yellow-500 text-white p-3 rounded-3xl shadow-lg">
-                    <div class="flex flex-row-reverse md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
-                        <img src="image/berhitung.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
-                        <p class="text-lg md:text-xl text-center font-extrabold w-full pl-10">Petualang Kata</p>
-                    </div>
-                </a>
-            </div>
-        </main>
+    </div>
+  </main>
     </div>
 
     <script>
