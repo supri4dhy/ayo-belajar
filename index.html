@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayo Belajar!</title>
+    
+    <!-- Memuat Tailwind CSS untuk styling modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat DotLottie Player untuk animasi baru -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    
+    <style>
+        /* Menggunakan font Nunito yang ramah dan mudah dibaca anak-anak */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+        body {
+            font-family: 'Nunito', sans-serif;
+            -webkit-tap-highlight-color: transparent; /* Menghilangkan sorotan biru saat disentuh di mobile */
+        }
+
+        /* Styling untuk splash screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f9ff; /* Warna biru langit yang cerah */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.7s ease-out;
+        }
+
+        /* Gaya kartu dashboard yang lebih ceria */
+        .dashboard-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .dashboard-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- ===== SPLASH SCREEN DENGAN ANIMASI LOTTIE ===== -->
+    <div id="splash-screen">
+        <div class="text-center">
+            <dotlottie-player src="https://lottie.host/68c4cfab-81c2-44d8-94de-24ad0540664f/ntdpBpn7GM.lottie" background="transparent" speed="1" style="width: 300px; height: 300px; margin: 0 auto;" loop autoplay></dotlottie-player>
+            <p class="mt-4 text-2xl font-extrabold text-blue-500">Ayo Mulai Belajar!</p>
+        </div>
+    </div>
+
+    <!-- ===== KONTEN UTAMA (DASHBOARD) ===== -->
+    <div id="main-content" class="hidden">
+        <header class="bg-gradient-to-r from-blue-500 to-teal-400 shadow-lg">
+            <div class="max-w-4xl mx-auto py-5 px-5 text-center">
+                <h1 class="text-4xl font-extrabold text-white tracking-wide">Menu Belajar</h1>
+            </div>
+        </header>
+
+        <main class="max-w-4xl mx-auto p-3">
+            <!-- [DIUBAH] Grid dibuat responsif dengan 1 kolom di mobile dan 3 di desktop -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Kartu 1: Belajar Berhitung -->
+                <a href="https://supri4dhy.github.io/belajar-hitung/" target="_blank" class="dashboard-card block bg-gradient-to-br from-blue-400 to-blue-500 text-white p-3 rounded-3xl shadow-lg">
+                    <div class="flex flex-row md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
+                        <img src="image/berhitung2.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
+                        <p class="text-lg md:text-xl text-center font-extrabold w-full pr-10">Main Hitung</p>
+                    </div>
+                </a>
+
+
+                <!-- Kartu 2: Hitung Bersusun -->
+                <a href="https://supri4dhy.github.io/hitung/" target="_blank" class="dashboard-card block bg-gradient-to-br from-green-400 to-green-500 text-white p-3 rounded-3xl shadow-lg">
+                    <div class="flex flex-row-reverse md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
+                        <img src="image/berhitung.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
+                        <p class="text-lg md:text-xl text-center font-extrabold w-full pl-10">Piramida Angka</p>
+                    </div>
+                </a>
+
+                <!-- Kartu 3: Hitung Cepat -->
+                <a href="https://supri4dhy.github.io/belajar-cepat/" target="_blank" class="dashboard-card block bg-gradient-to-br from-red-400 to-red-500 text-white p-3 rounded-3xl shadow-lg">
+                    <div class="flex flex-row md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
+                        <img src="image/hitungcepat.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
+                        <p class="text-lg md:text-xl text-center font-extrabold w-full pr-10">Hitung Kilat</p>
+                    </div>
+                </a>
+
+                
+                <!-- Kartu 4: Dikte -->
+                <a href="https://supri4dhy.github.io/dikte/" target="_blank" class="dashboard-card block bg-gradient-to-br from-yellow-400 to-yellow-500 text-white p-3 rounded-3xl shadow-lg">
+                    <div class="flex flex-row-reverse md:flex-col items-center justify-center h-full text-left md:text-center gap-4">
+                        <img src="image/berhitung.png" alt="Ikon Belajar Berhitung" class="h-24 md:w-32 md:h-32 drop-shadow-lg px-10">
+                        <p class="text-lg md:text-xl text-center font-extrabold w-full pl-10">Petualang Kata</p>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript sederhana untuk menyembunyikan splash screen
+        window.addEventListener('load', () => {
+            const splashScreen = document.getElementById('splash-screen');
+            const mainContent = document.getElementById('main-content');
+
+            // Tunggu 3.5 detik agar animasi terlihat lebih lama
+            setTimeout(() => {
+                splashScreen.style.opacity = '0';
+                // Tunggu transisi selesai sebelum menghilangkan dari layout
+                setTimeout(() => {
+                    splashScreen.style.display = 'none';
+                    mainContent.classList.remove('hidden');
+                }, 700); // Durasi ini sama dengan transisi di CSS
+            }, 3500); 
+        });
+    </script>
+
+</body>
+</html>
